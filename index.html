@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  </head>
+
+  <body>
+    <h1>Stellar Ledger RT</h1>
+    <div class="ledger">
+      <div class="latest">
+        <table>
+          <tr>
+            <th>Hash</th>
+            <th>TransactionType</th>
+            <th>Account</th>
+            <th>Fee</th>
+            <th>Destination</th>
+            <th>Amount</th>
+          </tr>
+          <tbody class="latest-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="lib/jquery-2.1.1.min.js"></script>
+    <script src="lib/async-0.9.0.min.js"></script>
+    <script src="lib/sjcl.js"></script>
+    <script src="lib/stellar-0.9.2.js"></script>
+
+    <!-- Controllers -->
+    <script src="ledger_c.js"></script>
+
+    <!-- Main -->
+    <script type="text/javascript">
+      var ledger = ledger_c({ ledget_el: $('.ledger') }).init();
+    </script>
+  </body>
+</html>
