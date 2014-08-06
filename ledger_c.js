@@ -141,7 +141,7 @@ var ledger_c = function(spec, my) {
       if(body.find('tr').length > 20) {
         body.find('tr').last().remove();
       }
-      console.log(txn);
+      //console.log(txn);
     });
   }
 
