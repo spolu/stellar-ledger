@@ -133,7 +133,7 @@ var ledger_c = function(spec, my) {
       html += '  <td>' + txn.Account + '</td>'
       html += '  <td>' + txn.Fee + '</td>'
       html += '  <td>' + (txn.Destination || '') + '</td>'
-      html += '  <td>' + (txn.Amount || '') + '</td>'
+      html += '  <td>' + (txn.Amount / 1000000 || '') + '</td>'
       html += '</tr>';
 
       var body = my.latest_el.find('.latest-body');
